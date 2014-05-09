@@ -1,0 +1,122 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins,p, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@primaryColor: #383939;
+@secondaryColor: #66bbe3;
+@borderColor:red;
+@textColor:white;
+@width:98%;
+
+@paraColor: green;
+@textHighlight: #00214D;
+@fontFamily: Helvetica, Arial, sans-serif;
+@fontSize: 14px;
+@lineHeight: 21px;
+
+@introSize: 16px;
+@introLineHeight: 24px;
+@introFontVariant: small-caps;
+
+#container{
+    min-width: @width;
+    height: 450px;
+    border: 5px solid @borderColor;
+    text-align: center;
+}
+#firstHalf{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 250px;
+    background-color: @primaryColor;
+    color:@textColor;
+    height: 50%;
+    border:1px solid black;
+    .rounded_top(20px);
+}
+
+#secondHalf{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 250px;
+    height: 49%;
+    color:@textColor;
+    background-color: @secondaryColor;
+    border:1px solid black;
+}
+
+.rounded_top(@radius) {
+    -webkit-border-radius:@radius;
+    -webkit-border-radius:@radius;
+    -moz-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+    border-radius: @radius;
+}
+
+.button{
+    width:@width/10%;
+    color:@secondaryColor;
+    background:@primaryColor;
+    .rounded_top(5px);
+    margin-top: 10px;
+}
+
+p {
+    font-family: @fontFamily;
+    font-size: @fontSize;
+    line-height: @lineHeight;
+
+    &.intro {
+        color: @paraColor;
+        font-variant: @introFontVariant;
+        font-size: @introSize;
+        line-height: @introLineHeight;
+    } 
+
+    &.highlight {
+        color: @textHighlight;
+        font-weight: bold;
+    } 
+}
+
